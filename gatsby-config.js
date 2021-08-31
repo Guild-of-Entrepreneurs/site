@@ -73,7 +73,6 @@ module.exports = {
             return ""
           },
         // Make sure to get fetchLinks!
-        fetchLinks: [],
         htmlSerializer:
           ({ node, key, value }) =>
           (type, element, content, children) => {
