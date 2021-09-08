@@ -45,14 +45,14 @@ const GlobalStyles = createGlobalStyle`
     
 
     --h1: 3.5rem;
-    --h2: 3.3rem;
-    --h3: 3rem;
-    --h4: 2rem;
+    --h2: 2.66rem;
+    --h3: 2.05rem;
+    --h4: var(--h3);
     --h5: 1.7rem;
-    --h6: 1.5rem;
-    --bodyFontSize: 1.5rem;
-    --buttonFontSize: 1.4rem;
-    --bodyLineHeight: 30px;
+    --h6: 1.7rem;
+    --bodyFontSize: 1.52rem;
+    --buttonFontSize: var(--bodyFontSize);
+    --bodyLineHeight: 2.3rem;
 
     // Heights
     --headingHeight: 0;
@@ -140,15 +140,13 @@ const GlobalStyles = createGlobalStyle`
   @media ${props => props.theme.breakpoints.m} {
     :root {
       --h1: 5.2rem;
-      --h2: 4.7rem;
-      --h3: 4.2rem;
-      --h4: 1.9rem;
-      --h5: 1.8rem;
-      --h6: 1.7rem;
-      --bodyFontSize: 1.7rem;
-      --buttonFontSize: 1.7rem;
-      --logoFontSize: 2.5rem;
-      --footerlogoFontSize : 1.8rem;
+      --h2: 3.6rem;
+      --h3: 2.7rem;
+      --h4: 2.22rem;
+      --h5: 1.67rem;
+      --h6: 1.67rem;
+      --bodyFontSize: 1.56rem;
+      --buttonFontSize: var(--bodyFontSize);
 
       // Configs
     }
@@ -167,8 +165,7 @@ const GlobalStyles = createGlobalStyle`
       --h4: 2.13rem;
       --h6: 1.6rem;
       --bodyFontSize: 1.6rem;
-      --buttonFontSize: 1.6rem;
-      --logoFontSize: 2.4rem;
+      --buttonFontSize: var(--bodyFontSize);
 
       // Configs
     }
