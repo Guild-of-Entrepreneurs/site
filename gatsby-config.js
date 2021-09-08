@@ -62,29 +62,29 @@ module.exports = {
         // Add any options here
       },
     },
-    {
-      resolve: `gatsby-source-prismic`,
-      options: {
-        repositoryName: "guildofentrepreneurs",
-        accessToken: process.env.API_KEY,
-        linkResolver:
-          ({ node, key, value }) =>
-          doc => {
-            return ""
-          },
-        // Make sure to get fetchLinks!
-        htmlSerializer:
-          ({ node, key, value }) =>
-          (type, element, content, children) => {
-            return ""
-          },
-        shouldDownloadImage: ({ node, key, value }) => {
-          // Return true to download the image or false to skip.
-          return false
-        },
-        schemas: {},
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-prismic`,
+    //   options: {
+    //     repositoryName: "guildofentrepreneurs",
+    //     accessToken: process.env.API_KEY,
+    //     linkResolver:
+    //       ({ node, key, value }) =>
+    //       doc => {
+    //         return ""
+    //       },
+    //     // Make sure to get fetchLinks!
+    //     htmlSerializer:
+    //       ({ node, key, value }) =>
+    //       (type, element, content, children) => {
+    //         return ""
+    //       },
+    //     shouldDownloadImage: ({ node, key, value }) => {
+    //       // Return true to download the image or false to skip.
+    //       return false
+    //     },
+    //     schemas: {},
+    //   },
+    // },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
