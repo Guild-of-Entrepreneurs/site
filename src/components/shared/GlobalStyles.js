@@ -54,8 +54,12 @@ const GlobalStyles = createGlobalStyle`
     --buttonFontSize: var(--bodyFontSize);
     --bodyLineHeight: 2.3rem;
 
+    --lightWeight: 200;
+    --strongWeight: 700;
+
     // Heights
     --headingHeight: 0;
+    --sectionHeight: 100vh;
     
     // Shadows
     --screenShadow: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
