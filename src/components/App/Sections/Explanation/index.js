@@ -23,6 +23,10 @@ const Content = styled(Row)`
     font-weight: var(--lightWeight);
   }
 
+  p {
+    max-width: 50rem;
+  }
+
   .strong {
     color: var(--primary);
     font-weight: var(--strongWeight);
@@ -42,17 +46,22 @@ const InfoBlock = styled(Row)`
     font-weight: var(--strongWeight);
   }
 
+  p {
+    max-width: 30rem;
+  }
+
   svg {
     width: var(--iconSize);
     height: var(--iconSize);
     stroke-width: 1.5px;
+    color: var(--gray-1);
   }
 `
 
 function Explanation() {
   return (
     <ExplanationStyles>
-      <Content sd={2} ed={6} sm={3} em={9}>
+      <Content sd={2} ed={6} sm={3} em={9} sl={2} el={14}>
         <h2>
           So, What is <span class="strong">The Guild of Entrepreneurs</span>?
         </h2>
@@ -61,17 +70,17 @@ function Explanation() {
           purpose of supporting entrepreneurs.
         </p>
       </Content>
-      <InfoBlock sd={2} ed={6} sm={2} em={6}>
+      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
         <Search></Search>
         <h3>Transparent</h3>
         <p>All our financial information is open and available to everyone.</p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={6} em={10}>
+      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
         <DollarSign></DollarSign>
         <h3>Profitable</h3>
         <p>We are bootstrapped and self-sufficient.</p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={2} em={6}>
+      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
         <Search></Search>
         <h3>Decentralized</h3>
         <p>
@@ -79,7 +88,7 @@ function Explanation() {
           on a democratic/decentralised decision making model.
         </p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={6} em={10}>
+      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
         <Search></Search>
         <h3>Community</h3>
         <p>
