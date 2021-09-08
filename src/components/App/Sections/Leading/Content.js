@@ -11,12 +11,30 @@ const ContentStyles = styled(Row)`
     font-weight: 700;
     margin-bottom: 1rem;
   }
+
+  .full-paragraph {
+    display: none;
+  }
+
+  @media ${props => props.theme.breakpoints.m} {
+    .full-paragraph {
+      display: block;
+    }
+    .mobile-paragraph {
+      display: none;
+    }
+    margin-top: 14rem;
+  }
+
+  @media ${props => props.theme.breakpoints.l} {
+    margin-top: 20rem;
+  }
 `
 
-const Content = props => (
+const Content = ({ paragraph, paragraphHeading }) => (
   <ContentStyles sd={2} ed={6} sm={3} em={9} sl={4} el={12}>
-    <h3>{props.paragraphHeading}</h3>
-    <p>{props.paragraph}</p>
+    <h3>{paragraphHeading}</h3>
+    <p>{paragraph}</p>
   </ContentStyles>
 )
 

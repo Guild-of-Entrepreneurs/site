@@ -6,8 +6,6 @@ import Heading from "./Heading.js"
 import Content from "./Content.js"
 
 const LeadingStyles = styled(FullWidthSection)`
-  --sectionHeight: 100vh;
-
   min-height: var(--sectionHeight);
   width: 100%;
 
@@ -26,7 +24,7 @@ function Leading() {
       ></Content>
       <Content
         paragraphHeading="We need to support each other."
-        paragraph="We are often in situations where we don't know what to do and we struggle to even know what to Google or who to ask."
+        paragraph="We believe that entrepreneurship is a powerful force for positive change. To increase the chances of successfully making this change we need help which is best when it comes from fellow entrepreneurs."
       ></Content>
     </LeadingStyles>
   )

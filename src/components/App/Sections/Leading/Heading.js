@@ -19,11 +19,9 @@ const HeadingStyles = styled(Row)`
 `
 
 const Heading = () => (
-  <HeadingStyles sd={2} ed={6} sm={2} em={10} sl={4} el={12}>
-    <h2>
-      If you want to be, are or support entrepreneurs,{" "}
-      <span className="highlight">The Guild is for you.</span>
-    </h2>
+  <HeadingStyles sd={2} ed={6} sm={1} em={11} sl={1} el={15}>
+    <h2>If you want to be, are or support entrepreneurs,</h2>
+    <h2 className="highlight">The Guild is for you.</h2>
   </HeadingStyles>
 )
 
