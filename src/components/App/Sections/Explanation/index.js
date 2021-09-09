@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { DollarSign, Search } from "react-feather"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
-import Heading from "../../../shared/styles/Heading"
+import { H2, H3 } from "../../../shared/styles/Heading"
 
 const ExplanationStyles = styled(FullWidthSection)`
   min-height: var(--sectionHeight);
@@ -59,9 +59,9 @@ function Explanation() {
   return (
     <ExplanationStyles>
       <Content sd={2} ed={6} sm={3} em={9} sl={2} el={14}>
-        <Heading>
+        <H2>
           So, What is <span class="strong">The Guild of Entrepreneurs</span>?
-        </Heading>
+        </H2>
         <p>
           We are an independent, lean organisation that exists for the sole
           purpose of supporting entrepreneurs.
@@ -69,17 +69,17 @@ function Explanation() {
       </Content>
       <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
         <Search></Search>
-        <h3>Transparent</h3>
+        <H3>Transparent</H3>
         <p>All our financial information is open and available to everyone.</p>
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
         <DollarSign></DollarSign>
-        <h3>Profitable</h3>
+        <H3>Profitable</H3>
         <p>We are bootstrapped and self-sufficient.</p>
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
         <Search></Search>
-        <h3>Decentralized</h3>
+        <H3>Decentralized</H3>
         <p>
           We don't have a central HQ, we are everywhere and nowhere. We operate
           on a democratic/decentralised decision making model.
@@ -87,7 +87,7 @@ function Explanation() {
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
         <Search></Search>
-        <h3>Community</h3>
+        <H3>Community</H3>
         <p>
           We are a community of entrepreneurs, who are committed to building a
           deeply supportive entrepreneurial network.

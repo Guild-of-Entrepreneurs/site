@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
-import Heading from "../../../shared/styles/Heading"
+import { H2 } from "../../../shared/styles/Heading"
 
 const MembersStyles = styled(FullWidthSection)`
   min-height: var(--sectionHeight);
@@ -78,9 +78,9 @@ function Members() {
   return (
     <MembersStyles>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
-        <Heading>
+        <H2>
           <span className="stong">Meet Our Members</span>
-        </Heading>
+        </H2>
         <p>Here's what our members have to say.</p>
       </Headline>
       <Row className="testimonials" sd={2} ed={6} sm={2} em={10} sl={2} el={14}>

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
-import Heading from "../../../shared/styles/Heading"
+import { H2 } from "../../../shared/styles/Heading"
 
 const HowWeWorkStyles = styled(FullWidthSection)`
   min-height: var(--sectionHeight);
@@ -21,9 +21,9 @@ function HowWeWork() {
   return (
     <HowWeWorkStyles>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
-        <Heading light>
+        <H2 light>
           Here's <span className="strong">How We Work</span>
-        </Heading>
+        </H2>
       </Headline>
     </HowWeWorkStyles>
   )

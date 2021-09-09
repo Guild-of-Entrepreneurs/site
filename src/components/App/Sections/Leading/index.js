@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
-import Heading from "../../../shared/styles/Heading"
+import { H2 } from "../../../shared/styles/Heading"
 import Content from "./Content.js"
 
 const LeadingStyles = styled(FullWidthSection)`
@@ -22,13 +22,13 @@ function Leading() {
   return (
     <LeadingStyles>
       <Headline sd={2} ed={6} sm={1} em={11} sl={1} el={15}>
-        <Heading>
+        <H2>
           <h2>
             If you want to be, are or support entrepreneurs,
             <br />
             <span className="strong">The Guild is for you.</span>
           </h2>
-        </Heading>
+        </H2>
       </Headline>
       <Content
         paragraphHeading="Being an entrepreneur is tough."

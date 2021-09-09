@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Row from "../../../Layout/Row"
+import { H4 } from "../../../shared/styles/Heading"
 
 const ContentStyles = styled(Row)`
   text-align: center;
@@ -33,7 +34,7 @@ const ContentStyles = styled(Row)`
 
 const Content = ({ paragraph, paragraphHeading }) => (
   <ContentStyles sd={2} ed={6} sm={3} em={9} sl={4} el={12}>
-    <h3>{paragraphHeading}</h3>
+    <H4>{paragraphHeading}</H4>
     <p>{paragraph}</p>
   </ContentStyles>
 )

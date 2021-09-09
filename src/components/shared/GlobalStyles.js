@@ -52,7 +52,7 @@ const GlobalStyles = createGlobalStyle`
     --h6: 1.7rem;
     --bodyFontSize: 1.52rem;
     --buttonFontSize: var(--bodyFontSize);
-    --bodyLineHeight: 2.3rem;
+    --bodyLineHeight: 32px;
 
     --lightWeight: 200;
     --strongWeight: 700;
@@ -99,7 +99,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    line-height: 30px;
+    line-height: var(--bodyLineHeight);
   }
 
   h1,h2,h3,h4,h5 {
@@ -110,31 +110,38 @@ const GlobalStyles = createGlobalStyle`
 
   h1 {
     font-size: var(--h1);
+    line-height: calc(1.5 * var(--h1));
   }
 
   h2 {
     font-size: var(--h2);
+    line-height: calc(1.5 * var(--h2));
   }
 
   h3 {
     font-size: var(--h3); 
+    line-height: calc(1.5 * var(--h3));
   }
 
   h4 {
     font-size: var(--h4);
+    line-height: calc(1.5 * var(--h4));
   }
 
   h5 {
     font-size: var(--h5);
+    line-height: calc(1.5 * var(--h5));
   }
 
   h6 {
     font-size: var(--h6);
+    line-height: calc(1.5 * var(--h6));
   }
 
   a {
     color: var(--black);
     text-decoration: none;
+    line-height: var(--bodyLineHeight);
   }
 
   @media ${props => props.theme.breakpoints.s} {
