@@ -6,29 +6,33 @@ import Row from "../../../Layout/Row"
 import { H4 } from "../../../shared/styles/Heading"
 
 const ContentStyles = styled(Row)`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   margin-top: 5rem;
   h3 {
     font-weight: 700;
-    margin-bottom: 1rem;
   }
 
-  .full-paragraph {
-    display: none;
+  p {
+    margin-top: 1rem;
+    max-width: 60rem;
   }
 
   @media ${props => props.theme.breakpoints.m} {
-    .full-paragraph {
-      display: block;
-    }
-    .mobile-paragraph {
-      display: none;
-    }
     margin-top: 14rem;
+    p {
+      margin-top: 2rem;
+    }
   }
 
   @media ${props => props.theme.breakpoints.l} {
-    margin-top: 20rem;
+    margin-top: 15rem;
+    p {
+      margin-top: 3rem;
+    }
   }
 `
 
