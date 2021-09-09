@@ -17,7 +17,7 @@ const Button = styled(Link)`
   cursor: pointer;
   margin: 0.8rem 0;
 
-  width: 18rem;
+  width: 20rem;
 
   &:hover {
     box-shadow: var(--level-3);

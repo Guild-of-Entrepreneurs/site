@@ -48,14 +48,14 @@ module.exports = {
       },
     },
     // TODO: Add SEO plugins (sitemap etc)
-    {
-      resolve: `gatsby-plugin-react-svg`,
-      options: {
-        rule: {
-          include: /images/,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-react-svg`,
+    //   options: {
+    //     rule: {
+    //       include: /images/,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
