@@ -16,17 +16,27 @@ const HeroStyles = styled(FullWidthSection)`
   align-content: center;
   position: relative;
 
+  .plant {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 99;
+    max-width: 75px;
+  }
+
   .human {
     position: absolute;
-    top: 50%;
+    top: 70%;
     z-index: 100;
+    max-width: 20rem;
 
     &--left {
-      left: 5%;
+      left: 0;
+      display: none;
     }
 
     &--right {
-      right: 5%;
+      right: 0;
     }
   }
 
@@ -49,6 +59,51 @@ const HeroStyles = styled(FullWidthSection)`
 
   .custom-shape-divider-top-1631165560 .shape-fill {
     fill: #292929;
+  }
+
+  @media ${props => props.theme.breakpoints.s} {
+    .human {
+      top: 65%;
+      max-width: 30rem;
+    }
+    .plant {
+      top: 40%;
+      right: 5%;
+      max-width: 11rem;
+    }
+  }
+  @media ${props => props.theme.breakpoints.m} {
+    .plant {
+      top: 25%;
+      right: 5%;
+      max-width: 15rem;
+    }
+    .human {
+      top: 50%;
+      max-width: 40rem;
+
+      &--left {
+        display: block;
+      }
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.l} {
+    .human {
+      max-width: 100%;
+      &--left {
+        left: 5%;
+      }
+      &--right {
+        right: 5%;
+      }
+    }
+
+    .plant {
+      max-width: 25rem;
+      top: 10%;
+      right: 10%;
+    }
   }
 `
 

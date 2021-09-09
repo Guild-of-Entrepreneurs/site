@@ -16,6 +16,7 @@ const LogoStyles = styled(Row)`
 
   img {
     max-width: min(600px, 70vw);
+    min-width: 300px;
   }
 `
 

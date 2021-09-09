@@ -4,6 +4,7 @@ import { Button } from "../../../shared/styles"
 import Logo from "./Logo"
 import heroLeft from "../../../../images/hero-left.svg"
 import heroRight from "../../../../images/hero-right.svg"
+import plant from "../../../../images/plant.svg"
 
 function Hero() {
   return (
@@ -13,6 +14,7 @@ function Hero() {
         <Button>Join the community</Button>
         <Button light>Visit the library</Button>
       </HeroStyles.Buttons>
+      <img className="plant" src={plant} alt="plant" />
       <img className="human human--left" src={heroLeft} alt="left human" />
       <img className="human human--right" src={heroRight} alt="right human" />
       <div class="custom-shape-divider-top-1631165560">
