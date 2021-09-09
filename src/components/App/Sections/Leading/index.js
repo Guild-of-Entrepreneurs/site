@@ -23,11 +23,9 @@ function Leading() {
     <LeadingStyles>
       <Headline sd={2} ed={6} sm={1} em={11} sl={1} el={15}>
         <H2>
-          <h2>
-            If you want to be, are or support entrepreneurs,
-            <br />
-            <span className="strong">The Guild is for you.</span>
-          </h2>
+          If you want to be, are or support entrepreneurs,
+          <br />
+          <span className="strong">The Guild is for you.</span>
         </H2>
       </Headline>
       <Content
