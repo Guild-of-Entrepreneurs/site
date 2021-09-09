@@ -3,6 +3,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Row from "../../../Layout/Row"
+import logo from "../../../../images/logo.svg"
+
+// console.log(MyLogo)
 
 const LogoStyles = styled(Row)`
   display: flex;
@@ -10,6 +13,10 @@ const LogoStyles = styled(Row)`
   align-items: center;
 
   margin-bottom: 2rem;
+
+  img {
+    max-width: min(600px, 70vw);
+  }
 `
 
 function Logo() {
@@ -17,12 +24,14 @@ function Logo() {
     <LogoStyles sd={2} ed={6} sm={3} em={9} sl={3} el={13}>
       <Link>
         <h1>
-          <StaticImage
+          {/* <MyLogo></MyLogo> */}
+          <img src={logo} alt="logo" />
+          {/* <StaticImage
             src="../../../../images/cropped-logo.png"
             // height={300}
             // width={300}
             alt="logo"
-          ></StaticImage>
+          ></StaticImage> */}
         </h1>
       </Link>
     </LogoStyles>
