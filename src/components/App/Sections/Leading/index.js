@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 import FullWidthSection from "../../../Layout/FullWidthSection"
-import Heading from "./Heading.js"
+import Row from "../../../Layout/Row"
+import Heading from "../../../shared/styles/Heading"
 import Content from "./Content.js"
 
 const LeadingStyles = styled(FullWidthSection)`
@@ -12,12 +13,23 @@ const LeadingStyles = styled(FullWidthSection)`
   background: var(--white);
 
   align-content: center;
+  text-align: center;
 `
+
+const Headline = styled(Row)``
 
 function Leading() {
   return (
     <LeadingStyles>
-      <Heading></Heading>
+      <Headline sd={2} ed={6} sm={1} em={11} sl={1} el={15}>
+        <Heading>
+          <h2>
+            If you want to be, are or support entrepreneurs,
+            <br />
+            <span className="strong">The Guild is for you.</span>
+          </h2>
+        </Heading>
+      </Headline>
       <Content
         paragraphHeading="Being an entrepreneur is tough."
         paragraph="We are often in situations where we don't know what to do and we struggle to even know what to Google or who to ask."

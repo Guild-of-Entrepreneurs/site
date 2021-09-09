@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { DollarSign, Search } from "react-feather"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
+import Heading from "../../../shared/styles/Heading"
 
 const ExplanationStyles = styled(FullWidthSection)`
   min-height: var(--sectionHeight);
@@ -18,10 +19,6 @@ const Content = styled(Row)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h2 {
-    font-weight: var(--lightWeight);
-  }
 
   p {
     max-width: 50rem;
@@ -62,9 +59,9 @@ function Explanation() {
   return (
     <ExplanationStyles>
       <Content sd={2} ed={6} sm={3} em={9} sl={2} el={14}>
-        <h2>
+        <Heading>
           So, What is <span class="strong">The Guild of Entrepreneurs</span>?
-        </h2>
+        </Heading>
         <p>
           We are an independent, lean organisation that exists for the sole
           purpose of supporting entrepreneurs.
