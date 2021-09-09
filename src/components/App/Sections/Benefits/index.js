@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
-import Heading from "../../../shared/styles/Heading"
+import { H2, H3 } from "../../../shared/styles/Heading"
 
 const BenefitsStyles = styled(FullWidthSection)`
   text-align: center;
@@ -21,13 +21,13 @@ function Benefits() {
   return (
     <BenefitsStyles>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
-        <Heading>
+        <H2>
           <span className="strong">Benefits and Features</span>
-        </Heading>
+        </H2>
       </Headline>
       <Benefit>
         <Content sd={2} ed={6} sm={2} em={10} sl={3} el={7}>
-          <h3>Learn</h3>
+          <H3>Learn</H3>
           <p>
             Learn from like-minded entrepreneurs with their own unique insights
             and stories. Grow your business through actionable advice and
@@ -37,7 +37,7 @@ function Benefits() {
       </Benefit>
       <Benefit>
         <Content sd={2} ed={6} sm={2} em={10} sl={9} el={13}>
-          <h3>Connect</h3>
+          <H3>Connect</H3>
           <p>
             Grow your network of like-minded entrepreneurs and mentors that you
             can support and call on for advice.
@@ -46,7 +46,7 @@ function Benefits() {
       </Benefit>
       <Benefit>
         <Content sd={2} ed={6} sm={2} em={10} sl={3} el={7}>
-          <h3>Collaborate</h3>
+          <H3>Collaborate</H3>
           <p>
             Start collaborating with other members so you can get your ideas off
             the ground faster.
