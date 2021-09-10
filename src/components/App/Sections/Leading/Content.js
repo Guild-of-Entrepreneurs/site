@@ -1,6 +1,4 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Row from "../../../Layout/Row"
 import { H4 } from "../../../shared/styles/Heading"

@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Guild of Entrepreneurs`,
+    title: `The Guild of Entrepreneurs`,
     description: `Site for the Guild of Entrepreneurs.`,
     author: `@goe`,
     siteUrl: `https://guildofentrepreneurs.com`,
@@ -22,13 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `guild-of-entrepreneurs`,
+        short_name: `goe`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#786BE1`,
+        theme_color: `#786BE1`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
@@ -48,14 +48,6 @@ module.exports = {
       },
     },
     // TODO: Add SEO plugins (sitemap etc)
-    // {
-    //   resolve: `gatsby-plugin-react-svg`,
-    //   options: {
-    //     rule: {
-    //       include: /images/,
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {

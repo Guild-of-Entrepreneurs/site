@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Row from "../../../Layout/Row"
 import { H4 } from "../../../shared/styles/Heading"
 
 const ContentBlockStyles = styled.div`
