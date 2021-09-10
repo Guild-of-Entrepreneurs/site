@@ -6,7 +6,8 @@ import { Button } from "../../../shared/styles"
 import Text from "./Text.js"
 
 const JoinStyles = styled(FullWidthSection)`
-  min-height: var(--sectionHeight);
+  /* min-height: var(--sectionHeight); */
+  padding: var(--sectionPadding);
 `
 
 const JoinButtonStyles = styled(Row)`

@@ -11,8 +11,6 @@ import leafRight from "../../../../images/leaf-right.svg"
 const LeadingStyles = styled(FullWidthSection)`
   width: 100%;
 
-  background: var(--white);
-
   align-content: center;
   text-align: center;
 

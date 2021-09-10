@@ -34,6 +34,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #FFFFFF;
 
     // Colours as Intentions
+    --bodyBackground: #F7F9FA;
     --bodyTextColor: var(--black);
     --primary: var(--purple-1);
     --secondary: var(--red-1);
@@ -61,11 +62,9 @@ const GlobalStyles = createGlobalStyle`
     --headingHeight: 0;
     --sectionHeight: 100vh;
     
-    // Shadows
-    --screenShadow: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25));
-
     // Elevation
     --level-3: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    --softShadow: 0px 2px 30px rgba(0, 0, 0, 0.03);
 
     // Transitions
     --cubeTransition: all 0.15s cubic-bezier(1,.25,0,.75) 0s;
@@ -98,6 +97,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: var(--bodyFontSize);
     font-family: var(--bodyFont);
+    background: var(--bodyBackground);
   }
 
   p {
