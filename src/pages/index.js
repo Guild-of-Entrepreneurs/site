@@ -10,6 +10,7 @@ import {
   Members,
   Join,
 } from "../components/App/Sections"
+import ArrowDivider from "../components/App/Sections/ArrowDivider"
 // import Seo from "../components/shared/Seo"
 
 const IndexPage = () => (
@@ -17,6 +18,7 @@ const IndexPage = () => (
     {/* <Seo title="Home" /> */}
     <Hero></Hero>
     <Leading></Leading>
+    <ArrowDivider></ArrowDivider>
     <Explanation></Explanation>
     <HowWeWork></HowWeWork>
     <Benefits></Benefits>

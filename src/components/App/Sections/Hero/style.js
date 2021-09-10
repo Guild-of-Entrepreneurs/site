@@ -6,7 +6,7 @@ const HeroStyles = styled(FullWidthSection)`
   /* --sectionHeight: 100vh; */
 
   // Offset
-  margin-bottom: 30rem;
+  margin-bottom: 15rem;
 
   /* min-height: var(--sectionHeight); */
   width: 100%;
@@ -62,6 +62,7 @@ const HeroStyles = styled(FullWidthSection)`
   }
 
   @media ${props => props.theme.breakpoints.s} {
+    margin-bottom: 20rem;
     .human {
       top: 65%;
       max-width: 30rem;
@@ -73,6 +74,7 @@ const HeroStyles = styled(FullWidthSection)`
     }
   }
   @media ${props => props.theme.breakpoints.m} {
+    margin-bottom: 25rem;
     .plant {
       top: 25%;
       right: 5%;
@@ -89,6 +91,7 @@ const HeroStyles = styled(FullWidthSection)`
   }
 
   @media ${props => props.theme.breakpoints.l} {
+    margin-bottom: 30rem;
     .human {
       max-width: 100%;
       &--left {

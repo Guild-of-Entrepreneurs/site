@@ -69,6 +69,9 @@ const GlobalStyles = createGlobalStyle`
 
     // Transitions
     --cubeTransition: all 0.15s cubic-bezier(1,.25,0,.75) 0s;
+
+    // Configs
+    --sectionPadding: 5rem 0;
   }
 
   // !smooth scrolling
@@ -160,6 +163,7 @@ const GlobalStyles = createGlobalStyle`
       --buttonFontSize: var(--bodyFontSize);
 
       // Configs
+      --sectionPadding: 7rem 0;
     }
 
 
@@ -179,6 +183,7 @@ const GlobalStyles = createGlobalStyle`
       --buttonFontSize: var(--bodyFontSize);
 
       // Configs
+      --sectionPadding: 10rem 0;
     }
 
     html {

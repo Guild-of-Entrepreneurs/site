@@ -7,10 +7,8 @@ import { H2 } from "../../../shared/styles/Heading"
 import Content from "./Content.js"
 import leafLeft from "../../../../images/leaf-left.svg"
 import leafRight from "../../../../images/leaf-right.svg"
-import arrowDown from "../../../../images/arrow-down.svg"
 
 const LeadingStyles = styled(FullWidthSection)`
-  min-height: var(--sectionHeight);
   width: 100%;
 
   background: var(--white);
@@ -19,17 +17,7 @@ const LeadingStyles = styled(FullWidthSection)`
   text-align: center;
 
   position: relative;
-
-  margin-bottom: 14rem;
-
-  .arrow {
-    position: absolute;
-    bottom: -14rem;
-    max-height: 14rem;
-    // position in the center horizontally
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  padding: var(--sectionPadding);
 
   .leaf {
     position: absolute;
@@ -48,29 +36,18 @@ const LeadingStyles = styled(FullWidthSection)`
   }
 
   @media ${props => props.theme.breakpoints.s} {
-    .leaf {
-      display: block;
-      max-width: 12rem;
-    }
   }
   @media ${props => props.theme.breakpoints.m} {
-    margin-bottom: 18rem;
+    /* margin-bottom: 18rem; */
 
-    .arrow {
-      bottom: -18rem;
-      max-height: 18rem;
-    }
     .leaf {
+      display: block;
       max-width: 15rem;
     }
   }
   @media ${props => props.theme.breakpoints.l} {
-    margin-bottom: 35rem;
+    /* margin-bottom: 35rem; */
 
-    .arrow {
-      bottom: -35rem;
-      max-height: 35rem;
-    }
     .leaf {
       max-width: 20rem;
 
@@ -103,7 +80,6 @@ function Leading() {
         paragraphHeading="We need to support each other."
         paragraph="We believe that entrepreneurship is a powerful force for positive change. To increase the chances of successfully making this change we need help which is best when it comes from fellow entrepreneurs."
       ></Content>
-      <img className="arrow" src={arrowDown} alt="arrow down" />
     </LeadingStyles>
   )
 }
