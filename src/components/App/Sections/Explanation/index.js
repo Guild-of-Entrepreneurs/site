@@ -6,7 +6,8 @@ import Row from "../../../Layout/Row"
 import { H2, H3 } from "../../../shared/styles/Heading"
 
 const ExplanationStyles = styled(FullWidthSection)`
-  min-height: var(--sectionHeight);
+  /* min-height: var(--sectionHeight); */
+  padding: var(--sectionPadding);
   /* background: red; */
 
   align-content: center;
