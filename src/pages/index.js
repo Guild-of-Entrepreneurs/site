@@ -23,6 +23,7 @@ const IndexPage = () => (
     <HowWeWork></HowWeWork>
     <Benefits></Benefits>
     <Members></Members>
+    <ArrowDivider></ArrowDivider>
     <Join></Join>
   </Layout>
 )

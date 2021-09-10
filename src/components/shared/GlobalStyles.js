@@ -98,7 +98,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: var(--bodyFontSize);
     font-family: var(--bodyFont);
-    /* overflow: hidden; */
   }
 
   p {
