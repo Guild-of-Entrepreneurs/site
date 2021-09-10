@@ -11,6 +11,7 @@ const TextStyle = styled(Row)`
   text-align: center;
 
   h2 {
+    margin-top: 10rem;
     margin-bottom: 3rem;
   }
 `
