@@ -45,7 +45,7 @@ function Testimonial({ data: { content, name, subheading, src } }) {
     <TestimonialStyles>
       <p>{content}</p>
       <div className="about">
-        <img src={src} alt="profile picture" />
+        <img src={src} alt="profile" />
         <div className="text">
           <h6>{name}</h6>
           <span>{subheading}</span>

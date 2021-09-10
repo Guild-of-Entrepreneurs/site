@@ -4,12 +4,12 @@ import { Link } from "gatsby"
 // A styled component for the button with primary background color and pill shape
 const Button = styled(Link)`
   background: ${props =>
-    props.light ? "none" : props.alt ? "none" : "var(--primary)"};
+    props.light ? "none" : props.alternate ? "none" : "var(--primary)"};
   border-radius: 50px;
   color: ${props =>
     props.light
       ? "var(--white)"
-      : props.alt
+      : props.alternate
       ? "var(--primary)"
       : "var(--white)"};
   font-size: var(--buttonFontSize);
@@ -21,7 +21,7 @@ const Button = styled(Link)`
   border: ${props =>
     props.light
       ? "3px solid var(--white)"
-      : props.alt
+      : props.alternate
       ? "3px solid var(--primary)"
       : "3px solid var(--primary)"};
   cursor: pointer;

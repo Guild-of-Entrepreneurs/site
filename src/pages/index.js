@@ -11,11 +11,11 @@ import {
   Join,
 } from "../components/App/Sections"
 import ArrowDivider from "../components/App/Sections/ArrowDivider"
-// import Seo from "../components/shared/Seo"
+import Seo from "../components/shared/Seo"
 
 const IndexPage = () => (
   <Layout>
-    {/* <Seo title="Home" /> */}
+    <Seo title="Home" />
     <Hero></Hero>
     <Leading></Leading>
     <ArrowDivider></ArrowDivider>

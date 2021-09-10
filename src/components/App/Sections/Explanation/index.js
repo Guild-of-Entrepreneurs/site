@@ -89,7 +89,7 @@ function Explanation() {
       <Content sd={2} ed={6} sm={3} em={9} sl={2} el={14}>
         <H2>
           So, What is <br className="temp" />{" "}
-          <span class="strong">The Guild of Entrepreneurs</span>?
+          <span className="strong">The Guild of Entrepreneurs</span>?
         </H2>
         <p>
           We are an independent, lean organisation that exists for the sole

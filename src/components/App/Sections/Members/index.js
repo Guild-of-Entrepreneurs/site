@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { v4 as uuid } from "uuid"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
 import { H2 } from "../../../shared/styles/Heading"
@@ -60,7 +61,7 @@ const Headline = styled(Row)`
 const testData = [
   {
     content:
-      "The Guild has been instrumental in moving emu-health forward on a positive trajectory. The education, networking opportunities & the reporting/ accountability expectations have been a way to keep us on track with our goals, which has been a key to us securing funding. Probably one of the biggest catalysts for change for me personally has been gather.town - totally changed the way I operate! Thank you!",
+      "The Guild has been instrumental in moving emu-health forward on a positive trajectory. The education, networking opportunities, and accountability have been a way to keep us on track, which has been a key to us securing funding. The biggest catalyst for change for me personally has been the Guild Gather sessions - totally changed the way I operate! Thank you!",
     name: "Leigh Sherry",
     subheading: "Founder of DeskCoach",
     src: leigh,
@@ -113,7 +114,7 @@ function Members() {
       </Headline>
       <Row className="testimonials" sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
         {testData.map(data => {
-          return <Testimonial data={data} />
+          return <Testimonial key={uuid()} data={data} />
         })}
       </Row>
     </MembersStyles>

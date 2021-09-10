@@ -28,7 +28,7 @@ function Join() {
       <Text></Text>
       <JoinButtonStyles sd={2} ed={6} sm={4} em={8} sl={5} el={11}>
         <Button>Join the community</Button>
-        <Button alt>Visit the Library</Button>
+        <Button alternate>Visit the Library</Button>
       </JoinButtonStyles>
     </JoinStyles>
   )
