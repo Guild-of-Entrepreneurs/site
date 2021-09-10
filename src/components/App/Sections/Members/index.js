@@ -3,17 +3,21 @@ import styled from "styled-components"
 import FullWidthSection from "../../../Layout/FullWidthSection"
 import Row from "../../../Layout/Row"
 import { H2 } from "../../../shared/styles/Heading"
+import Testimonial from "./Testimonial"
+
+import bruce from "../../../../images/bruce.jpeg"
+import gemma from "../../../../images/gemma.jpeg"
+import elizabeth from "../../../../images/elizabeth.jpeg"
+import chris from "../../../../images/chris.jpeg"
+import leigh from "../../../../images/leigh.jpeg"
+import billie from "../../../../images/billie.jpeg"
 
 const MembersStyles = styled(FullWidthSection)`
-  min-height: var(--sectionHeight);
+  padding: var(--sectionPadding);
   text-align: center;
 
-  .test {
-    background: red;
-    margin-bottom: 10px;
-  }
-
   .testimonials {
+    column-gap: 3.7rem;
     column-count: 1;
   }
 
@@ -35,42 +39,66 @@ const Headline = styled(Row)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  p {
+    margin-top: 2rem;
+  }
+
+  margin-bottom: 3rem;
+
+  @media ${props => props.theme.breakpoints.m} {
+    margin-bottom: 6rem;
+  }
+
+  @media ${props => props.theme.breakpoints.l} {
+    p {
+      margin-top: 3.5rem;
+    }
+  }
 `
 
 const testData = [
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor amet porro eum rerum deserunt aut placeat enim labore! Ipsa minima asperiores repellat amet fuga in adipisci corrupti, quisquam ipsum eligendi dolores. Suscipit voluptatum laboriosam a commodi nobis! Minus hic in reiciendis, ea rem quaerat commodi deleniti ducimus quisquam soluta.",
-  "bye",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis iste animi, pariatur officiis nisi rerum sequi, eaque aut facere asperiores fuga magni adipisci quasi fugiat ratione officia quas? Eligendi, iste?",
-  "what",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum totam alias odit vero iste quos saepe accusamus inventore tempore?",
-  "up",
-  "dude",
-]
-
-const breakpoints = [
   {
-    sd: 2,
-    ed: 6,
-    sm: 2,
-    em: 6,
-    sl: 2,
-    el: 6,
+    content:
+      "The Guild has been instrumental in moving emu-health forward on a positive trajectory. The education, networking opportunities & the reporting/ accountability expectations have been a way to keep us on track with our goals, which has been a key to us securing funding. Probably one of the biggest catalysts for change for me personally has been gather.town - totally changed the way I operate! Thank you!",
+    name: "Leigh Sherry",
+    subheading: "Founder of DeskCoach",
+    src: leigh,
   },
   {
-    sd: 2,
-    ed: 6,
-    sm: 2,
-    em: 6,
-    sl: 6,
-    el: 10,
+    content:
+      "Having a place to network with those within the startup ecosystem is essential to a startups success, and even more, founder support. The guild is the place where founder find other founders, and companies find their feet.",
+    name: "Gemma Colbran",
+    subheading: "Founder of dARTbase",
+    src: gemma,
   },
   {
-    sd: 2,
-    ed: 6,
-    sm: 6,
-    em: 10,
-    sl: 10,
-    el: 14,
+    content:
+      "The Guild of Entrepreneurs offers a unique proposition; peer to peer sharing of innovative ideas, experience and expertise within a supportive community of like minded individuals focused on collaboration not self promotion.",
+    name: "Bruce Tulloch",
+    subheading: "Founder of --",
+    src: bruce,
+  },
+  {
+    content:
+      "The Guild of Entrepreneurs is an amazing community of like-minded founders, industry experts, and passionate mentors who collaborate to build the startup ecosystem like no other. The Guild has allowed us to build our brand awareness and new business opportunities, as well as meeting so many incredible founders!",
+    name: "Elizabeth Van Rooyen",
+    subheading: "Founder of Diligr",
+    src: elizabeth,
+  },
+  {
+    content:
+      "As a first time founder, I am often facing new situations and challenges. The Guild of Entrepreneurs library and community is like a secret weapon, with a tonne of useful resources and advice all in one place!",
+    name: "Billie Trinder",
+    subheading: "Founder of Remindly",
+    src: billie,
+  },
+  {
+    content:
+      "The Guild to me is like the X-men or Sense8 - we all have a special powers and we come together to help each other out when needed. I enjoyed connecting with like minded individuals who also wanting to be the change they would like to see.",
+    name: "Chris K O",
+    subheading: "Founder of Upzeez",
+    src: chris,
   },
 ]
 
@@ -84,22 +112,8 @@ function Members() {
         <p>Here's what our members have to say.</p>
       </Headline>
       <Row className="testimonials" sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
-        {testData.map((item, index) => {
-          // const { sd, ed, sm, em, sl, el } = breakpoints[index % 3]
-          return (
-            <div
-              className="test"
-              key={index}
-              // sd={sd}
-              // ed={ed}
-              // sm={sm}
-              // em={em}
-              // sl={sl}
-              // el={el}
-            >
-              <p>{item}</p>
-            </div>
-          )
+        {testData.map(data => {
+          return <Testimonial data={data} />
         })}
       </Row>
     </MembersStyles>

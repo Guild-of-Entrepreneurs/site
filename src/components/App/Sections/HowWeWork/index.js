@@ -34,7 +34,7 @@ const HowWeWorkStyles = styled(FullWidthSection)`
   }
 
   .custom-shape-divider-top-1631239164 .shape-fill {
-    fill: #fff;
+    fill: var(--bodyBackground);
   }
 
   // Bottom Divider
@@ -56,7 +56,7 @@ const HowWeWorkStyles = styled(FullWidthSection)`
   }
 
   .custom-shape-divider-bottom-1631239274 .shape-fill {
-    fill: #ffffff;
+    fill: var(--bodyBackground);
   }
 `
 
