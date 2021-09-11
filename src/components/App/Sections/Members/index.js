@@ -18,14 +18,6 @@ const MembersStyles = styled(FullWidthSection)`
   text-align: center;
 
   .testimonials {
-    column-gap: 3.7rem;
-    column-count: 1;
-  }
-
-  @media ${props => props.theme.breakpoints.m} {
-    .testimonials {
-      column-count: 2;
-    }
   }
 
   @media ${props => props.theme.breakpoints.l} {
@@ -55,6 +47,20 @@ const Headline = styled(Row)`
     p {
       margin-top: 3.5rem;
     }
+  }
+`
+
+const Testimonials = styled(Row)`
+  overflow-y: visible;
+
+  column-gap: 3.7rem;
+  column-count: 1;
+
+  @media ${props => props.theme.breakpoints.m} {
+    column-count: 2;
+  }
+  @media ${props => props.theme.breakpoints.m} {
+    column-count: 3;
   }
 `
 
@@ -112,11 +118,11 @@ function Members() {
         </H2>
         <p>Here's what our members have to say.</p>
       </Headline>
-      <Row className="testimonials" sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
+      <Testimonials sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
         {testData.map(data => {
           return <Testimonial key={uuid()} data={data} />
         })}
-      </Row>
+      </Testimonials>
     </MembersStyles>
   )
 }

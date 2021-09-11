@@ -53,6 +53,13 @@ const Content = styled(Row)`
 const ImageWrapper = styled(Row)`
   img {
     max-width: min(500px, 100%);
+    transition: var(--cubeTransition);
+  }
+
+  img {
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   @media ${props => props.theme.breakpoints.l} {

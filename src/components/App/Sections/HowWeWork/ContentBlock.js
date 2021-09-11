@@ -8,6 +8,9 @@ const ContentBlockStyles = styled.div`
   justify-content: center;
   align-items: center;
 
+  user-select: none;
+  cursor: default;
+
   background: var(--white);
   width: 100%;
   border-radius: 200px 200px 20px 20px;
@@ -17,6 +20,8 @@ const ContentBlockStyles = styled.div`
   height: 45rem;
   max-width: 37rem;
 
+  transition: var(--cubeTransition);
+
   p {
     margin-top: 2rem;
   }
@@ -24,6 +29,22 @@ const ContentBlockStyles = styled.div`
   img {
     margin-top: -15rem;
     max-height: 28rem;
+    transition: var(--cubeTransition);
+  }
+
+  &:hover {
+    box-shadow: var(--e5);
+    // move upwards on hover and scale up
+    transform: translateY(-10px);
+
+    h4 {
+      color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    img {
+      transform: scale(1.02);
+    }
   }
 
   @media ${props => props.theme.breakpoints.m} {
@@ -44,6 +65,7 @@ const ContentBlockStyles = styled.div`
 
 const ContentHeading = styled(H4)`
   margin-top: -1.5rem;
+  transition: var(--cubeTransition);
 `
 
 const ContentBlock = ({ src, title, content }) => {

@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 // A styled component for the button with primary background color and pill shape
-const Button = styled(Link)`
+const Button = styled.a`
   background: ${props =>
-    props.light ? "none" : props.alternate ? "none" : "var(--primary)"};
+    props.light ? "none" : props.alternate ? "var(--white)" : "var(--primary)"};
   border-radius: 50px;
   color: ${props =>
     props.light
@@ -29,8 +29,24 @@ const Button = styled(Link)`
 
   width: 20rem;
 
+  box-shadow: var(--e1);
+
+  // hover animations
   &:hover {
-    box-shadow: var(--level-3);
+    box-shadow: var(--e5);
+    background: var(--purple-4);
+    background: ${props => (props.light ? "var(--white)" : "var(--purple-2)")};
+    color: ${props => (props.light ? "var(--primary)" : "var(--white)")};
+    border: 3px solid var(--purple-2);
+    border: ${props =>
+      props.light ? "3px solid var(--white)" : "3px solid var(--purple-2)"};
+    // move button up on hover
+    transform: translateY(-5px);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+    box-shadow: var(--e3);
   }
 
   @media ${props => props.theme.breakpoints.s} {
