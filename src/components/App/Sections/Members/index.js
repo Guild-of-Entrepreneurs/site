@@ -83,7 +83,7 @@ const testData = [
     content:
       "The Guild of Entrepreneurs offers a unique proposition; peer to peer sharing of innovative ideas, experience and expertise within a supportive community of like minded individuals focused on collaboration not self promotion.",
     name: "Bruce Tulloch",
-    subheading: "Founder of --",
+    subheading: "Founder of BitScope",
     src: bruce,
   },
   {
