@@ -10,6 +10,11 @@ const ArrowStyles = styled(FullWidthSection)`
 
   .arrow {
     max-height: 14rem;
+    transition: var(--cubeTransition);
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   @media ${props => props.theme.breakpoints.s} {
   }

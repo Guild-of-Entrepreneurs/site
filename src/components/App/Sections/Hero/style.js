@@ -16,6 +16,19 @@ const HeroStyles = styled(FullWidthSection)`
   align-content: center;
   position: relative;
 
+  img {
+    transition: var(--cubeTransition);
+  }
+
+  .human,
+  .plant {
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
   .plant {
     position: absolute;
     right: 0;
@@ -118,6 +131,7 @@ const Buttons = styled(Row)`
   flex-wrap: wrap;
 
   margin-top: calc(max(-200px, -20vw));
+  z-index: 5;
 
   @media ${props => props.theme.breakpoints.l} {
     flex-direction: row;

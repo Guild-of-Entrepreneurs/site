@@ -66,6 +66,13 @@ const GlobalStyles = createGlobalStyle`
     --level-3: 0px 4px 50px rgba(0, 0, 0, 0.25);
     --softShadow: 0px 2px 30px rgba(0, 0, 0, 0.03);
 
+    // Atlassian Shadows
+    --e1: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    --e2: 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    --e3: 0px 8px 12px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    --e4: 0px 10px 18px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    --e5: 0px 18px 28px rgba(9, 30, 66, 0.15), 0px 0px 1px rgba(9, 30, 66, 0.31);
+
     // Transitions
     --cubeTransition: all 0.15s cubic-bezier(1,.25,0,.75) 0s;
 

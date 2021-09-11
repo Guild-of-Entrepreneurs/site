@@ -11,7 +11,30 @@ const TestimonialStyles = styled.div`
 
   margin-bottom: 3.7rem;
   text-align: left;
-  box-shadow: var(--softShadow);
+  box-shadow: var(--e1);
+
+  transition: var(--cubeTransition);
+
+  p,
+  span,
+  .about,
+  img {
+    transition: var(--cubeTransition);
+    user-select: none;
+    cursor: default;
+  }
+
+  &:hover {
+    /* box-shadow: var(--e2); */
+
+    p {
+      color: var(--black);
+    }
+
+    img {
+      border: 6px solid var(--primary);
+    }
+  }
 
   p {
     color: var(--gray-1);
@@ -36,7 +59,7 @@ const TestimonialStyles = styled.div`
     width: 55px;
     border-radius: 50%;
     margin-right: 1rem;
-    text-indent: -9999px;
+    border: 6px solid var(--gray-4);
   }
 `
 

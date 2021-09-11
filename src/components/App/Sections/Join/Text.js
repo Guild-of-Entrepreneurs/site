@@ -3,12 +3,17 @@ import Row from "../../../Layout/Row"
 import { H2 } from "../../../shared/styles/Heading"
 import styled from "styled-components"
 
-const TextStyle = styled(Row)`
+const TextStyles = styled(Row)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
   text-align: center;
+
+  p {
+    max-width: 58rem;
+  }
 
   h2 {
     margin-bottom: 3rem;
@@ -16,7 +21,7 @@ const TextStyle = styled(Row)`
 `
 
 const Text = () => (
-  <TextStyle sd={2} ed={6} sm={3} em={9} sl={4} el={12}>
+  <TextStyles sd={2} ed={6} sm={3} em={9} sl={4} el={12}>
     <H2>
       <span className="strong">How to Join</span>
     </H2>
@@ -25,7 +30,7 @@ const Text = () => (
       entrepreneurs that provides the tools, resources, and connections we all
       need in order to succeed.
     </p>
-  </TextStyle>
+  </TextStyles>
 )
 
 export default Text

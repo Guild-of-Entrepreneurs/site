@@ -18,6 +18,12 @@ const LeadingStyles = styled(FullWidthSection)`
   padding: var(--sectionPadding);
 
   .leaf {
+    transition: var(--cubeTransition);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
     position: absolute;
     display: none;
     z-index: 0;

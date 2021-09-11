@@ -47,39 +47,74 @@ const Content = styled(Row)`
 
 // Info is the info icon and the info text
 const InfoBlock = styled(Row)`
-  --iconSize: 6rem;
+  --iconSize: 4rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 5rem;
+  background: var(--white);
+  transition: var(--cubeTransition);
+  border-radius: 20px;
+  padding: 4rem 5rem;
+  box-shadow: var(--e1);
+
+  cursor: normal;
+
+  h3,
+  p,
+  svg {
+    transition: var(--cubeTransition);
+  }
+
+  /* margin-bottom: 5rem; */
 
   h3 {
-    font-weight: var(--strongWeight);
-    margin: 1rem 0 2rem 0;
+    font-weight: 600;
+    /* font-size: */
+    margin: 1rem 0 1.5rem 0;
   }
 
   p {
-    max-width: 30rem;
+    max-width: 35rem;
   }
 
   svg {
     width: var(--iconSize);
     height: var(--iconSize);
-    stroke-width: 1.5px;
+    stroke-width: 1px;
     color: var(--gray-1);
   }
+
+  user-select: none;
+  cursor: default;
+
   @media ${props => props.theme.breakpoints.s} {
-    --iconSize: 8rem;
+    --iconSize: 5rem;
   }
 
   @media ${props => props.theme.breakpoints.m} {
-    --iconSize: 10rem;
+    --iconSize: 7rem;
+
+    /* color: var(--gray-1); */
+
+    &:hover {
+      color: var(--black);
+      box-shadow: var(--e3);
+      transform: translateY(-2px);
+
+      svg {
+        color: var(--black);
+        stroke-width: 1.5px;
+      }
+    }
   }
 
   @media ${props => props.theme.breakpoints.l} {
-    margin-bottom: 8rem;
+    h3 {
+      font-size: 3.2rem;
+    }
+    /* margin-bottom: 6rem; */
   }
 `
 
@@ -96,17 +131,17 @@ function Explanation() {
           purpose of supporting entrepreneurs.
         </p>
       </Content>
-      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
+      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={8}>
         <Search></Search>
         <H3>Transparent</H3>
         <p>All our financial information is open and available to everyone.</p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
+      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={8} el={13}>
         <DollarSign></DollarSign>
         <H3>Profitable</H3>
         <p>We are bootstrapped and self-sufficient.</p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={7}>
+      <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={8}>
         <Aperture></Aperture>
         <H3>Decentralized</H3>
         <p>
@@ -114,7 +149,7 @@ function Explanation() {
           on a democratic/decentralised decision making model.
         </p>
       </InfoBlock>
-      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={9} el={13}>
+      <InfoBlock sd={2} ed={6} sm={6} em={10} sl={8} el={13}>
         <Users></Users>
         <H3>Community</H3>
         <p>
