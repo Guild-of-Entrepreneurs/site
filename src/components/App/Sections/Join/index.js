@@ -54,7 +54,7 @@ function Join() {
         </Button>
         <Button
           alternate
-          href="https://members.guildofentrepreneurs.com/member/sign_up/"
+          href="https://www.notion.so/The-Guild-Library-31cd4b22614d4c6c885202cb0ff3c60e"
         >
           Visit the Library
         </Button>
