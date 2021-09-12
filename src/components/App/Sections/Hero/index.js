@@ -5,6 +5,7 @@ import Logo from "./Logo"
 import heroLeft from "../../../../images/hero-left.svg"
 import heroRight from "../../../../images/hero-right.svg"
 import plant from "../../../../images/plant.svg"
+import { motion } from "framer-motion"
 
 function Hero() {
   return (
@@ -22,8 +23,22 @@ function Hero() {
         </Button>
       </HeroStyles.Buttons>
       <img className="plant" src={plant} alt="plant" />
-      <img className="human human--left" src={heroLeft} alt="left human" />
-      <img className="human human--right" src={heroRight} alt="right human" />
+      <motion.div
+        transition={{ duration: 0.8, delay: 0.1 }}
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="human human--left"
+      >
+        <img src={heroLeft} alt="left human" />
+      </motion.div>
+      <motion.div
+        transition={{ duration: 0.8, delay: 0.1 }}
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="human human--right"
+      >
+        <img src={heroRight} alt="right human" />
+      </motion.div>
       <div className="custom-shape-divider-top-1631165560">
         <svg
           data-name="Layer 1"
