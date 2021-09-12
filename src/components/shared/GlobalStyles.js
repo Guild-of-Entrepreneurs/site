@@ -105,10 +105,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--bodyFontSize);
     font-family: var(--bodyFont);
     background: var(--bodyBackground);
-    -webkit-user-select: none;  
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
   }
 
   p {
