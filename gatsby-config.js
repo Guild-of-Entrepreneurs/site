@@ -1,4 +1,6 @@
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -8,6 +10,14 @@ module.exports = {
     siteUrl: `https://guildofentrepreneurs.com`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        schemas: {},
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
