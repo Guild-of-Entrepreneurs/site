@@ -15,7 +15,7 @@ function Hero() {
           Join the community
         </Button>
         <Button
-          href="https://members.guildofentrepreneurs.com/member/sign_up/"
+          href="https://www.notion.so/The-Guild-Library-31cd4b22614d4c6c885202cb0ff3c60e"
           light
         >
           Visit the library
