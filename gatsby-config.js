@@ -1,6 +1,7 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config();
+
+
+const page = require("./src/schemas/page.json")
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +16,9 @@ module.exports = {
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        schemas: {
+          page: page,
+        }
       },
     },
     `gatsby-plugin-react-helmet`,

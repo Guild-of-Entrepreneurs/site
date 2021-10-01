@@ -5,37 +5,38 @@
  */
 
 // You can delete this file if you're not using it
-// const path = require("path")
+const path = require("path")
 
-// async function turnObjectsIntoPages({ graphql, actions }) {
-//   // 1. Get a template for the page
-//   const pageTemplate = path.resolve("./src/templates/Page.js")
+async function turnObjectsIntoPages({ graphql, actions }) {
+  // 1. Get a template for the page
+  const pageTemplate = path.resolve("./src/templates/Page.js")
 
-//   // 2. Query all page objects
-//   const { data } = await graphql(`
-//     query {
-//       pages: allPrismicPage {
-//         edges {
-//           node {
-//             uid
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   console.log(data)
+  // 2. Query all page objects
+  const { data } = await graphql(`
+    query {
+      pages: allPrismicPage {
+        edges {
+          node {
+            uid
+          }
+        }
+      }
+    }
+  `)
 
-//   data.pages.edges.forEach(({ node }) => {
-//     actions.createPage({
-//       path: `/${node.uid === "home" ? "" : node.uid}`,
-//       component: pageTemplate,
-//       context: {
-//         slug: node.uid,
-//       },
-//     })
-//   })
-// }
+  console.log(data)
 
-// exports.createPages = async function (params) {
-//   await turnObjectsIntoPages(params)
-// }
+  data.pages.edges.forEach(({ node }) => {
+    actions.createPage({
+      path: `/${node.uid === "home" ? "" : node.uid}`,
+      component: pageTemplate,
+      context: {
+        slug: node.uid,
+      },
+    })
+  })
+}
+
+exports.createPages = async function (params) {
+  await turnObjectsIntoPages(params)
+}
