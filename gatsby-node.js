@@ -24,8 +24,6 @@ async function turnObjectsIntoPages({ graphql, actions }) {
     }
   `)
 
-  console.log(data)
-
   data.pages.edges.forEach(({ node }) => {
     actions.createPage({
       path: `/${node.uid === "home" ? "" : node.uid}`,

@@ -10,7 +10,7 @@
     "title": {
       "type": "StructuredText",
       "config": {
-        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
         "label": "Title",
         "placeholder": "Title"
       }
@@ -75,6 +75,86 @@
                 }
               }
             },
+            "repeat": {}
+          },
+          "leading": {
+            "type": "Slice",
+            "fieldset": "Leading",
+            "description": "Leading",
+            "icon": "clear_all",
+            "display": "list",
+            "non-repeat": {
+              "title1": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+                  "label": "Title"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "arrow_divider": {
+            "type": "Slice",
+            "fieldset": "Arrow Divider",
+            "description": "Arrow divider",
+            "icon": "arrow_downward",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "explanation": {
+            "type": "Slice",
+            "fieldset": "Explanation",
+            "description": "Explanation",
+            "icon": "explicit",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "how_we_work": {
+            "type": "Slice",
+            "fieldset": "How We Work",
+            "description": "How we work",
+            "icon": "show_chart",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "benefits": {
+            "type": "Slice",
+            "fieldset": "Benefits",
+            "description": "benefits",
+            "icon": "beenhere",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "members": {
+            "type": "Slice",
+            "fieldset": "Members",
+            "description": "Members",
+            "icon": "accessibility",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "arrow_divider1": {
+            "type": "Slice",
+            "fieldset": "Arrow Divider",
+            "description": "Arrow divider",
+            "icon": "arrow_downward",
+            "display": "list",
+            "non-repeat": {},
+            "repeat": {}
+          },
+          "join": {
+            "type": "Slice",
+            "fieldset": "Join",
+            "description": "Join",
+            "icon": "add_shopping_cart",
+            "display": "list",
+            "non-repeat": {},
             "repeat": {}
           }
         }
