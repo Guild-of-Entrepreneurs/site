@@ -44,19 +44,16 @@ const ImageWrapper = styled(Row)`
   }
 `
 
-function Join() {
+function Join({ data: { primary } }) {
   return (
     <JoinStyles>
-      <Text></Text>
+      <Text primary={primary}></Text>
       <JoinButtonStyles sd={2} ed={6} sm={4} em={8} sl={5} el={11}>
-        <Button href="https://members.guildofentrepreneurs.com/member/sign_up/">
-          Join the community
+        <Button href={primary.button_1_link.url}>
+          {primary.button_1_text.text}
         </Button>
-        <Button
-          alternate
-          href="https://www.notion.so/The-Guild-Library-31cd4b22614d4c6c885202cb0ff3c60e"
-        >
-          Visit the Library
+        <Button alternate href={primary.button_2_link.url}>
+          {primary.button_2_text.text}
         </Button>
       </JoinButtonStyles>
       <ImageWrapper sd={1} ed={7} sm={1} em={11} sl={1} el={15}>

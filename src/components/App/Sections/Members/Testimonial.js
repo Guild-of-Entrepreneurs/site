@@ -63,15 +63,15 @@ const TestimonialStyles = styled.div`
   }
 `
 
-function Testimonial({ data: { content, name, subheading, src } }) {
+function Testimonial({ item }) {
   return (
     <TestimonialStyles>
-      <p>{content}</p>
+      <p>{item.member_testimonial.text}</p>
       <div className="about">
-        <img src={src} alt="profile" />
+        <img src={item.member_photo.url} alt="profile" />
         <div className="text">
-          <h6>{name}</h6>
-          <span>{subheading}</span>
+          <h6>{item.member_name.text}</h6>
+          <span>{item.member_description.text}</span>
         </div>
       </div>
     </TestimonialStyles>

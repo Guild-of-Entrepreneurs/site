@@ -118,44 +118,36 @@ const InfoBlock = styled(Row)`
   }
 `
 
-function Explanation() {
+function Explanation({ data: { primary, items } }) {
   return (
     <ExplanationStyles>
       <Content sd={2} ed={6} sm={3} em={9} sl={2} el={14}>
         <H2>
-          So, What is <br className="temp" />{" "}
-          <span className="strong">The Guild of Entrepreneurs</span>?
+          {primary.explanation_title.text}
+          <br className="temp" />
+          <span className="strong">{primary.explanation_title_2.text}</span>
         </H2>
-        <p>
-          We are an independent, lean organisation that exists for the sole
-          purpose of supporting entrepreneurs.
-        </p>
+        <p>{primary.explanation_content.text}</p>
       </Content>
       <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={8}>
         <Search></Search>
-        <H3>Transparent</H3>
-        <p>All our financial information is open and available to everyone.</p>
+        <H3>{items[0].explanation_card_title.text}</H3>
+        <p>{items[0].explanation_card_content.text}</p>
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={6} em={10} sl={8} el={13}>
         <DollarSign></DollarSign>
-        <H3>Profitable</H3>
-        <p>We are bootstrapped and self-sufficient.</p>
+        <H3>{items[1].explanation_card_title.text}</H3>
+        <p>{items[1].explanation_card_content.text}</p>
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={2} em={6} sl={3} el={8}>
         <Aperture></Aperture>
-        <H3>Decentralized</H3>
-        <p>
-          We don't have a central HQ, we are everywhere and nowhere. We operate
-          on a democratic/decentralised decision making model.
-        </p>
+        <H3>{items[2].explanation_card_title.text}</H3>
+        <p>{items[2].explanation_card_content.text}</p>
       </InfoBlock>
       <InfoBlock sd={2} ed={6} sm={6} em={10} sl={8} el={13}>
         <Users></Users>
-        <H3>Community</H3>
-        <p>
-          We are a community of entrepreneurs, who are committed to building a
-          deeply supportive entrepreneurial network.
-        </p>
+        <H3>{items[3].explanation_card_title.text}</H3>
+        <p>{items[3].explanation_card_content.text}</p>
       </InfoBlock>
     </ExplanationStyles>
   )

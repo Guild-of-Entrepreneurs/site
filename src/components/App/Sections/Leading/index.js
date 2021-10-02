@@ -64,25 +64,25 @@ const LeadingStyles = styled(FullWidthSection)`
 
 const Headline = styled(Row)``
 
-function Leading() {
+function Leading({ data: { primary } }) {
   return (
     <LeadingStyles>
       <img className="leaf leaf--right" src={leafRight} alt="leaf right" />
       <img className="leaf leaf--left" src={leafLeft} alt="leaf left" />
       <Headline sd={2} ed={6} sm={1} em={11} sl={1} el={15}>
         <H2>
-          If you want to be, are or support entrepreneurs,
+          {primary.leading_title.text}
           <br />
-          <span className="strong">The Guild is for you.</span>
+          <span className="strong">{primary.leading_title_pt_2.text}</span>
         </H2>
       </Headline>
       <Content
-        paragraphHeading="Being an entrepreneur is tough."
-        paragraph="We are often in situations where we don't know what to do and we struggle to even know what to Google or who to ask."
+        paragraphHeading={primary.paragraph_1_heading.text}
+        paragraph={primary.paragraph_1_content.text}
       ></Content>
       <Content
-        paragraphHeading="We need to support each other."
-        paragraph="We believe that entrepreneurship is a powerful force for positive change. To increase the chances of successfully making this change we need help which is best when it comes from fellow entrepreneurs."
+        paragraphHeading={primary.paragraph_2_heading.text}
+        paragraph={primary.paragraph_2_content.text}
       ></Content>
     </LeadingStyles>
   )

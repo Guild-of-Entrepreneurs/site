@@ -66,30 +66,153 @@ export const query = graphql`
               button_2_text {
                 text
               }
+              button_1_link {
+                url
+              }
+              button_2_link {
+                url
+              }
             }
           }
           ... on PrismicPageDataBodyLeading {
             slice_type
-          }
-          ... on PrismicPageDataBodyMembers {
-            slice_type
-          }
-          ... on PrismicPageDataBodyJoin {
-            slice_type
+            primary {
+              leading_title {
+                text
+              }
+              leading_title_pt_2 {
+                text
+              }
+              paragraph_1_content {
+                text
+              }
+              paragraph_1_heading {
+                text
+              }
+              paragraph_2_content {
+                text
+              }
+              paragraph_2_heading {
+                text
+              }
+            }
           }
           ... on PrismicPageDataBodyHowWeWork {
+            id
+            primary {
+              how_we_work_title {
+                text
+              }
+              how_we_work_title_2 {
+                text
+              }
+            }
             slice_type
+            items {
+              how_we_work_card_content {
+                text
+              }
+              how_we_work_card_title {
+                text
+              }
+            }
           }
-          ... on PrismicPageDataBodyExplanation {
+          ... on PrismicPageDataBodyJoin {
+            id
+            slice_type
+            primary {
+              button_1_link {
+                url
+              }
+              button_1_text {
+                text
+              }
+              button_2_link {
+                url
+              }
+              button_2_text {
+                text
+              }
+              join_content {
+                text
+              }
+              join_title {
+                text
+              }
+            }
+          }
+          ... on PrismicPageDataBodyMembers {
+            id
+            items {
+              member_description {
+                text
+              }
+              member_name {
+                text
+              }
+              member_photo {
+                url
+              }
+              member_testimonial {
+                text
+              }
+            }
+            primary {
+              members_content {
+                text
+              }
+              members_title {
+                text
+              }
+            }
             slice_type
           }
           ... on PrismicPageDataBodyBenefits {
+            id
             slice_type
+            primary {
+              benefits_title {
+                text
+              }
+            }
+            items {
+              benefit_content {
+                text
+              }
+              benefit_title {
+                text
+              }
+            }
+          }
+          ... on PrismicPageDataBodyExplanation {
+            id
+            primary {
+              explanation_content {
+                text
+              }
+              explanation_title {
+                text
+              }
+              explanation_title_2 {
+                text
+              }
+            }
+            slice_type
+            items {
+              explanation_card_content {
+                text
+              }
+              explanation_card_title {
+                text
+              }
+            }
           }
           ... on PrismicPageDataBodyArrowDivider {
+            id
             slice_type
           }
           ... on PrismicPageDataBodyArrowDivider1 {
+            id
             slice_type
           }
         }

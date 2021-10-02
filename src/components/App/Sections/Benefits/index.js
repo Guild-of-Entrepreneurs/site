@@ -69,12 +69,12 @@ const ImageWrapper = styled(Row)`
   }
 `
 
-function Benefits() {
+function Benefits({ data: { primary, items } }) {
   return (
     <BenefitsStyles>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
         <H2>
-          <span className="strong">Benefits and Features</span>
+          <span className="strong">{primary.benefits_title.text}</span>
         </H2>
       </Headline>
       <Benefit>
@@ -92,12 +92,8 @@ function Benefits() {
           sl={3}
           el={7}
         >
-          <H3>Learn</H3>
-          <p>
-            Learn from like-minded entrepreneurs with their own unique insights
-            and stories. Grow your business through actionable advice and
-            support.
-          </p>
+          <H3>{items[0].benefit_title.text}</H3>
+          <p>{items[0].benefit_content.text}</p>
         </Content>
       </Benefit>
       <Benefit>
@@ -115,11 +111,8 @@ function Benefits() {
           sl={9}
           el={13}
         >
-          <H3>Connect</H3>
-          <p>
-            Grow your network of like-minded entrepreneurs and mentors that you
-            can support and call on for advice.
-          </p>
+          <H3>{items[1].benefit_title.text}</H3>
+          <p>{items[1].benefit_content.text}</p>
         </Content>
       </Benefit>
       <Benefit>
@@ -137,11 +130,8 @@ function Benefits() {
           sl={3}
           el={7}
         >
-          <H3>Collaborate</H3>
-          <p>
-            Start collaborating with other members so you can get your ideas off
-            the ground faster.
-          </p>
+          <H3>{items[2].benefit_title.text}</H3>
+          <p>{items[2].benefit_content.text}</p>
         </Content>
       </Benefit>
     </BenefitsStyles>

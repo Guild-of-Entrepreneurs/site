@@ -64,63 +64,18 @@ const Testimonials = styled(Row)`
   }
 `
 
-const testData = [
-  {
-    content:
-      "The Guild has been instrumental in moving emu-health forward on a positive trajectory. The education, networking opportunities, and accountability have been a way to keep us on track, which has been a key to us securing funding. The biggest catalyst for change for me personally has been the Guild Gather sessions - totally changed the way I operate! Thank you!",
-    name: "Leigh Sherry",
-    subheading: "Founder of DeskCoach",
-    src: leigh,
-  },
-  {
-    content:
-      "Having a place to network with those within the startup ecosystem is essential to a startups success, and even more, founder support. The guild is the place where founder find other founders, and companies find their feet.",
-    name: "Gemma Colbran",
-    subheading: "Founder of dARTbase",
-    src: gemma,
-  },
-  {
-    content:
-      "The Guild of Entrepreneurs offers a unique proposition; peer to peer sharing of innovative ideas, experience and expertise within a supportive community of like minded individuals focused on collaboration not self promotion.",
-    name: "Bruce Tulloch",
-    subheading: "Founder of BitScope",
-    src: bruce,
-  },
-  {
-    content:
-      "The Guild of Entrepreneurs is an amazing community of like-minded founders, industry experts, and passionate mentors who collaborate to build the startup ecosystem like no other. The Guild has allowed us to build our brand awareness and new business opportunities, as well as meeting so many incredible founders!",
-    name: "Elizabeth Van Rooyen",
-    subheading: "Founder of Diligr",
-    src: elizabeth,
-  },
-  {
-    content:
-      "As a first time founder, I am often facing new situations and challenges. The Guild of Entrepreneurs library and community is like a secret weapon, with a tonne of useful resources and advice all in one place!",
-    name: "Billie Trinder",
-    subheading: "Founder of Remindly",
-    src: billie,
-  },
-  {
-    content:
-      "The Guild to me is like the X-men or Sense8 - we all have a special powers and we come together to help each other out when needed. I enjoyed connecting with like minded individuals who also wanting to be the change they would like to see.",
-    name: "Chris K O",
-    subheading: "Founder of Upzeez",
-    src: chris,
-  },
-]
-
-function Members() {
+function Members({ data: { primary, items } }) {
   return (
     <MembersStyles>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
         <H2>
-          <span className="stong">Meet Our Members</span>
+          <span className="stong">{primary.members_title.text}</span>
         </H2>
-        <p>Here's what our members have to say.</p>
+        <p>{primary.members_content.text}</p>
       </Headline>
       <Testimonials sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
-        {testData.map(data => {
-          return <Testimonial key={uuid()} data={data} />
+        {items.map(item => {
+          return <Testimonial key={uuid()} item={item} />
         })}
       </Testimonials>
     </MembersStyles>

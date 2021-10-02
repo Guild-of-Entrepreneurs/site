@@ -20,16 +20,12 @@ const TextStyles = styled(Row)`
   }
 `
 
-const Text = () => (
+const Text = ({ primary }) => (
   <TextStyles sd={2} ed={6} sm={3} em={9} sl={4} el={12}>
     <H2>
-      <span className="strong">How to Join</span>
+      <span className="strong">{primary.join_title.text}</span>
     </H2>
-    <p>
-      Membership is free. The Guild of Entrepreneurs is a community for
-      entrepreneurs that provides the tools, resources, and connections we all
-      need in order to succeed.
-    </p>
+    <p>{primary.join_content.text}</p>
   </TextStyles>
 )
 

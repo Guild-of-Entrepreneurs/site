@@ -87,7 +87,7 @@ const ContentRow = styled(Row)`
   }
 `
 
-function HowWeWork() {
+function HowWeWork({ data: { primary, items } }) {
   return (
     <HowWeWorkStyles>
       <div className="custom-shape-divider-top-1631239164">
@@ -105,29 +105,29 @@ function HowWeWork() {
       </div>
       <Headline sd={2} ed={6} sm={2} em={10} sl={2} el={14}>
         <H2 light>
-          Here's <span className="strong">How We Work</span>
+          {primary.how_we_work_title.text}
+          <span className="strong">{primary.how_we_work_title_2.text}</span>
         </H2>
       </Headline>
       <ContentRow sd={2} ed={6} sm={4} em={8} sl={2} el={6}>
         <ContentBlock
           src={humanOne}
-          title="It’s Ours"
-          content="As we build this community together, we have the opportunity to create and share valuable content, deeper conversations, and online events."
+          title={items[0].how_we_work_card_title.text}
+          content={items[0].how_we_work_card_content.text}
         />
       </ContentRow>
       <ContentRow sd={2} ed={6} sm={4} em={8} sl={6} el={10}>
         <ContentBlock
           src={humanTwo}
-          title="We Bring Content
-And Community Together"
-          content="Together, we will create new, fresh ideas and best practices that you can implement into your venture."
+          title={items[1].how_we_work_card_title.text}
+          content={items[1].how_we_work_card_content.text}
         />
       </ContentRow>
       <ContentRow sd={2} ed={6} sm={4} em={8} sl={10} el={14}>
         <ContentBlock
           src={humanThree}
-          title="Meet Others"
-          content="Entrepreneurship is lonely. You are venturing out and doing something most people don't understand. We get it. We are here to help each other."
+          title={items[2].how_we_work_card_title.text}
+          content={items[2].how_we_work_card_content.text}
         />
       </ContentRow>
       <div className="custom-shape-divider-bottom-1631239274">

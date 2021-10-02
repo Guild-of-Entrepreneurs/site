@@ -6,19 +6,16 @@ import heroLeft from "../../../../images/hero-left.svg"
 import heroRight from "../../../../images/hero-right.svg"
 import plant from "../../../../images/plant.svg"
 
-function Hero() {
+function Hero({ data: { primary } }) {
   return (
     <HeroStyles>
       <Logo></Logo>
       <HeroStyles.Buttons sd={2} ed={6} sm={4} em={8} sl={5} el={11}>
-        <Button href="https://members.guildofentrepreneurs.com/member/sign_up/">
-          Join the community
+        <Button href={primary.button_1_link.url}>
+          {primary.button_1_text.text}
         </Button>
-        <Button
-          href="https://members.guildofentrepreneurs.com/member/sign_up/"
-          light
-        >
-          Visit the library
+        <Button href={primary.button_2_link.url} light>
+          {primary.button_2_text.text}
         </Button>
       </HeroStyles.Buttons>
       <img className="plant" src={plant} alt="plant" />
