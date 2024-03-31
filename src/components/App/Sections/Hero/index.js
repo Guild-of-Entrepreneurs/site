@@ -11,7 +11,7 @@ function Hero() {
     <HeroStyles>
       <Logo></Logo>
       <HeroStyles.Buttons sd={2} ed={6} sm={4} em={8} sl={5} el={11}>
-        <Button href="https://community.guildofentrepreneurs.com/">
+        <Button href="https://community.guildofentrepreneurs.com/signup">
           Join the community
         </Button>
         <Button
