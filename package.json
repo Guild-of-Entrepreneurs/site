@@ -4,6 +4,9 @@
   "description": "Site for Guild of Entrepreneurs",
   "version": "0.1.0",
   "author": "Wilson Alex <guildentrepreneurs@gmail.com>",
+  "engines": {
+    "node": ">=14.0.0 <18.0.0"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
     "dotenv": "^10.0.0",
