@@ -39,8 +39,12 @@ jobs:
         ls -l public
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+        echo "running agent"
+        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+        echo "adding key"
         ssh-add ~/.ssh/id_rsa
         # Sync build directory to remote server
+        echo "syncing to: $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR"
         rsync -avz --delete public/ $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR
 
     
