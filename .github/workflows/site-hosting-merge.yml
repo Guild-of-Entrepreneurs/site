@@ -39,6 +39,9 @@ jobs:
         ls -l public
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+        ssh-add ~/.ssh/id_rsa
+        # Sync build directory to remote server
+        rsync -avz --delete public/ $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR
 
     
 #     - name: Deploy to DigitalOcean            
