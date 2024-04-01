@@ -39,6 +39,8 @@ jobs:
         ssh-add <(echo "$SSH_PRIVATE_KEY")
         # Add the host to the list of known hosts
         echo "adding host to the list of known hosts"
+        mkdir -p ~/.ssh
+        chmod 600 ~/.ssh
         ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
         # Sync build directory to remote server
         echo "syncing to: $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR"
