@@ -1,3 +1,6 @@
+# ssh keys
+.github/id_rsa*
+
 # Logs
 logs
 *.log
