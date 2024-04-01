@@ -31,18 +31,15 @@ jobs:
         DEPLOY_HOST: discourse.guildofentrepreneurs.com
         DEPLOY_DIR: /var/www/sites/guild-site/htdocs/
       run: |
-        # Setup SSH agent
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-        echo "SOCK: $SSH_AUTH_SOCK"
-        echo "USERNAME: $SSH_USERNAME"
-        ls -l public
-        chmod 600 ~/.ssh/id_rsa
+        # Start the SSH agent
+        echo "starting agent"
+        eval "$(ssh-agent -s)"
+        # Add the SSH private key to the agent
+        echo "adding ssh key to agent"
+        ssh-add <(echo "$SSH_PRIVATE_KEY")
+        # Add the host to the list of known hosts
+        echo "adding host to the list of known hosts"
         ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
-        echo "running agent"
-        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-        echo "adding key"
-        ssh-add ~/.ssh/id_rsa
         # Sync build directory to remote server
         echo "syncing to: $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR"
         rsync -avz --delete public/ $SSH_USERNAME@$DEPLOY_HOST:$DEPLOY_DIR
