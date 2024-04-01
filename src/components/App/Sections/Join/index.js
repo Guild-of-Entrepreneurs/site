@@ -49,7 +49,7 @@ function Join() {
     <JoinStyles>
       <Text></Text>
       <JoinButtonStyles sd={2} ed={6} sm={4} em={8} sl={5} el={11}>
-        <Button href="https://members.guildofentrepreneurs.com/member/sign_up/">
+        <Button href="https://community.guildofentrepreneurs.com/signup">
           Join the community
         </Button>
         <Button

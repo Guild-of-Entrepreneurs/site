@@ -3,8 +3,8 @@ name: Deploy Gatsby App
 on:
   push:
     branches: [main]
-#     paths:
-#       - 'src/**'
+    paths:
+      - 'src/**'
 
 jobs:
   deploy:
@@ -32,13 +32,13 @@ jobs:
         DEPLOY_DIR: /var/www/sites/guild-site/htdocs/
       run: |
         # Start the SSH agent
-        echo "starting agent"
+        #echo "starting agent"
         eval "$(ssh-agent -s)"
         # Add the SSH private key to the agent
-        echo "adding ssh key to agent"
+        #echo "adding ssh key to agent"
         ssh-add <(echo "$SSH_PRIVATE_KEY")
         # Add the host to the list of known hosts
-        echo "adding host to the list of known hosts"
+        #echo "adding host to the list of known hosts"
         mkdir -p ~/.ssh
         # chmod 600 ~/.ssh
         ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
