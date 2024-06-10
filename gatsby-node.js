@@ -1,3 +1,13 @@
+const { SourceMapConsumer } = require('source-map');
+
+SourceMapConsumer.initialize({
+  "lib/mappings.wasm": require.resolve("source-map/lib/mappings.wasm")
+});
+
+module.exports = {
+  // your existing Gatsby configuration
+};
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *

@@ -3,7 +3,7 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `The Guild of Entrepreneurs`,
-    description: `Site for the Guild of Entrepreneurs.`,
+    description: `Join the Guild of Entrepreneurs, a thriving community where business minds connect, adapt, and grow. Discover valuable insights, resources, and support to fuel your entrepreneurial journey. Network with like-minded leaders and innovate your path to success today.`,
     author: `@goe`,
     siteUrl: `https://guildofentrepreneurs.com`,
   },
@@ -36,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // ! Tracking ID NEEDS TO CHANGE! This is wrong!
-        trackingId: "UA-130029095-1",
+        trackingId: "UA-175987837-2",
         head: true,
       },
     },
